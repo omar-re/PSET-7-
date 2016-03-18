@@ -8,15 +8,23 @@
     {
         // else render form
         render("register_form.php", ["title" => "Register"]);
+        render("header.php", ["title" => "Header"]);
     }
     // else if user reached page via POST (as by submitting a form via POST)
     else if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
-        if ($_POST["username"] == NULL)
+        if ($_POST["name"] == NULL)
+        {
+            apologize("You must enter a name");
+        }
+        else if ($_POST["last_name"] == NULL)
+        {
+            apologize("You must enter a last name");
+        }
+        else if ($_POST["username"] == NULL)
         {
             apologize("You must enter a username");
         }
-        
         else if ($_POST["password"] == NULL)
         {
             apologize("You must enter a password");
@@ -27,7 +35,7 @@
             apologize("Your password and confirmation are diferent");
         }
         
-        else if (CS50::query("INSERT IGNORE INTO users (username, hash, cash) VALUES(?, ?, 10000.0000)", $_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT)) == 0)
+        else if (CS50::query("INSERT IGNORE INTO users (username, hash, cash, name, last_name) VALUES(?, ?, 10000.0000, ?, ?)", $_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT),  $_POST["name"], $_POST["last_name"]) == 0)
         {
             apologize("Username already exists");
             

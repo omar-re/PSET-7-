@@ -1,3 +1,7 @@
+<div class="jumbotron">
+        <h1>Hello, <?= $name["name"] ?> <?= $name["last_name"] ?></h1>
+            <p>Welcome to CS50 Finance</p>
+    </div>
 <h1>You have: $<?= number_format($cash,2) ?></h1>
 <table class="table table-striped">
 

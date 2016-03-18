@@ -41,18 +41,16 @@
                         <li><a href="history.php">History</a></li>
                         <li role="presentation" class="dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                            Settings<span class="caret"></span>
+                            <?= $name["name"] ?> <?= $name["last_name"] ?><span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu">
-                                 <li><a href="add.php">Add money</a></li>
-                                 <li><a href="new_p.php">Change password</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="logout.php"><strong>Log Out</strong></a></li>
+                                    <li><a href="add.php">Add money</a></li>
+                                    <li><a href="new_p.php">Change passwor</a></li>
+                                    <li><a href="logout.php"><strong>Log Out</strong></a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </ul>
                     <?php endif ?>
             </div>
-            
-
-
             <div id="middle">
