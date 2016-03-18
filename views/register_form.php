@@ -15,6 +15,17 @@
         <div class="form-group">
             <input class="form-control" name="confirmation" placeholder="Confirmation" type="password"/>
         </div>
+        <select class="form-control" name="symbol">
+                <option value="Symbol">Select Avatar</option>
+                <option value="Symbol">Cheetah</option>
+                <option value="Symbol">Elephant</option>
+                <option value="Symbol">Giraffe</option>
+                <option value="Symbol">Hare</option>
+                <option value="Symbol">Red Panda</option>
+                <option value="Symbol">Tiger</option>
+                <option value="Symbol">Owl</option>
+                <option value="Symbol">Fox</option>
+        </select>
         <table>
             <thead>
                 <tr>
@@ -35,7 +46,7 @@
             	<td><div><img width ="110px" alt="tiger" src="/img/tiger.jpg"/></a></div></td>
             </tr>
             <tr>
-            	<td></td><div><img width ="110px" alt="owl" src="/img/owl.jpg"/></a></div></td>
+            	<td><div><img width ="110px" alt="owl" src="/img/owl.jpg"/></a></div></td>
             	<td><div><img width ="110px" alt="fox" src="/img/fox.jpg"/></a></div></td>
             </tr>
             </tbody>
