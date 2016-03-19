@@ -1,6 +1,8 @@
 <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
+    <div class="col-md-2">
+      
+    </div>
+    <div class="col-md-6">
         <form action="register.php" method="post">
             <fieldset>
                 <div class="form-group">
@@ -19,7 +21,7 @@
                     <input class="form-control" name="confirmation" placeholder="Confirmation" type="password"/>
                 </div>
                 <div class="form-group">
-                    <select class="form-control" name="symbol">
+                    <select class="form-control" name="avatar">
                             <option value="Symbol">Select Avatar</option>
                             <option value="cheetah.jpg">Cheetah</option>
                             <option value="elephant.jpg">Elephant</option>
@@ -39,6 +41,9 @@
                 </div>
             </fieldset>
         </form>
+         <div>
+    or <a href="login.php">log in</a>
+    </div>
     </div>
     <div class="col-md-4">
         <table>
@@ -69,6 +74,4 @@
 
     </div>
 </div>
-<div>
-    or <a href="login.php">log in</a>
-</div>
+

@@ -35,7 +35,7 @@
             apologize("Your password and confirmation are diferent");
         }
         
-        else if (CS50::query("INSERT IGNORE INTO users (username, hash, cash, name, last_name) VALUES(?, ?, 10000.0000, ?, ?)", $_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT),  $_POST["name"], $_POST["last_name"]) == 0)
+        else if (CS50::query("INSERT IGNORE INTO users (username, hash, cash, name, last_name,avatar) VALUES(?, ?, 10000.0000, ?, ?,?)", $_POST["username"], password_hash($_POST["password"], PASSWORD_DEFAULT),  $_POST["name"], $_POST["last_name"],$_POST["avatar"]) == 0)
         {
             apologize("Username already exists");
             

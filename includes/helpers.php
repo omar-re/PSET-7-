@@ -144,9 +144,12 @@
             if(!empty($_SESSION["id"]))
             {
                 // inject name and last name to all views
-                $name = CS50::query("SELECT name, last_name FROM users WHERE id = ?", $_SESSION["id"]);
+                $name = CS50::query("SELECT name, last_name, avatar FROM users WHERE id = ?", $_SESSION["id"]);
                 $name = $name[0];
+                $cash = CS50::query("SELECT cash FROM users WHERE id = ?", $_SESSION["id"]);
+                $cash = $cash[0]["cash"];
             }
+        
             
             // render view (between header and footer)
             require("../views/header.php");
